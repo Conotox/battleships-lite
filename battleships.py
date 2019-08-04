@@ -64,9 +64,17 @@ def initiateGame():
 def initiateGame2():
 #Asking the player to type in the coordinates for their ship.
     playerxA = input("Enter your first ship co-ordinate 1: ")
-    player.coord1 = int(playerxA)
+    if playerxA.isdigit():
+      player.coord1 = int(playerxA)
+    else:
+      print("Type in numbers only.")
+      initiateGame2()
     playeryA = input("Enter your first ship co-ordinate 2: ")
-    player.coord2 = int(playeryA)
+    if playeryA.isdigit():
+      player.coord2 = int(playeryA)
+    else:
+      print("Type in numbers only.")
+      initiateGame2()
 #If the player types in coords which are outside the 5x5 grid, we ask them to try again.
     if player.coord1 > 5 or player.coord1 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
@@ -83,9 +91,17 @@ def initiateGame2():
 def initiateGame3():
 #Asking the player to type in the coordinates for their ship.
     playerxAA = input("Enter your second ship co-ordinate 1: ")
-    player2.coord1 = int(playerxAA)
+    if playerxAA.isdigit():
+      player2.coord1 = int(playerxAA)
+    else:
+      print("Type in numbers only.")
+      initiateGame3()
     playeryAA = input("Enter your second ship co-ordinate 2: ")
-    player2.coord2 = int(playeryAA)
+    if playeryAA.isdigit():
+      player2.coord2 = int(playeryAA)
+    else:
+      print("Type in numbers only.")
+      initiateGame3()
 #If the player types in coords which are outside the 5x5 grid, we ask them to try again.
     if player2.coord1 > 5 or player2.coord1 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
@@ -103,9 +119,17 @@ def initiateGame3():
 def initiateGame4():
 #Asking the player to type in the coordinates for their ship.
     playerxAAA = input("Enter your third and final ship co-ordinate 1: ")
-    player3.coord1 = int(playerxAAA)
-    playeryAAA = input("Enter your third and final ship co-ordinate 2: ")
-    player3.coord2 = int(playeryAAA)
+    if playerxAAA.isdigit():
+      player3.coord1 = int(playerxAAA)
+    else:
+      print("Type in numbers only.")
+      initiateGame4()
+    playeryAAA = input("Enter your third and final ship co-ordinate 2: ") 
+    if playeryAAA.isdigit():
+      player3.coord2 = int(playeryAAA)
+    else:
+      print("Type in numbers only.")
+      initiateGame4() 
 #If the player types in coords which are outside the 5x5 grid, we ask them to try again.
     if player3.coord1 > 5 or player3.coord1 < 1:
         print("It's a 5x5 Game, so pick a number between 1 and 5!")
@@ -129,9 +153,17 @@ def playGame():
     drawPlayMap()
     yourzlist = list(zip(yourxlist,yourylist))
     xxA = input("Guess coordinate 1:" )
-    xx = int(xxA)
+    if xxA.isdigit():
+      xx = int(xxA)
+    else:
+      print("Type in numbers only.")
+      playGame()
     yyA = input("Guess  coordinate 2:" )
-    yy = int(yyA)
+    if yyA.isdigit():
+      yy = int(yyA)
+    else:
+      print("Type in numbers only.")
+      playGame()
     if yy > 5 or yy < 1:
       print("It's a 5x5 Grid. Try again.")
       playGame()
