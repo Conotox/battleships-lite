@@ -2,7 +2,7 @@
 """
 Created on Wed Jul 31 09:35:00 2019
 
-@author: Tom.Balcombe
+@author: Conotox
 """
 
 # The game prerequisites
